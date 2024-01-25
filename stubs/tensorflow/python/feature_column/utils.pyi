@@ -1,0 +1,3 @@
+import tensorflow as tf
+
+def sequence_length_from_sparse_tensor(sp_tensor: tf.SparseTensor, num_elements: int = 1) -> tf.Tensor: ...

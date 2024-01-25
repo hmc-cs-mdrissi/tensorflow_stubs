@@ -1,0 +1,13 @@
+import tensorflow as tf
+
+class Partitioner:
+    def __call__(self, shape: tf.TensorShape, dtype: tf.dtypes.DType, axis: int = 0) -> list[int]: ...
+
+class FixedShardsPartitioner(Partitioner):
+    def __init__(self, num_shards: int) -> None: ...
+
+class MaxSizePartitioner(Partitioner):
+    def __init__(self, max_shard_bytes: int, max_shards: int | None = None, bytes_per_string: int = 16) -> None: ...
+
+class MinSizePartitioner(Partitioner):
+    def __init__(self, min_shard_bytes: int, max_shards: int = 1, bytes_per_string: int = 16) -> None: ...

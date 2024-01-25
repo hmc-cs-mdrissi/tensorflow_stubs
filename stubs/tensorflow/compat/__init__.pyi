@@ -1,0 +1,3 @@
+from tensorflow.compat import v1 as v1
+
+def as_bytes(bytes_or_text: str | bytes, encoding: str = "utf-8") -> bytes: ...
